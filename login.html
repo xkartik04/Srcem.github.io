@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shri Ram College Of Engineering and Management (SRCEM), Banmore</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="image/Logo/title.logo.jpg" type="icon/x-icon">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+
+            <div><img src="image/Logo/Group Logo.png" alt="Reload"></div>
+            <div class="box" id="box1"> <a href="index.html">Home</a></div>
+            <div class="box" id="box2"> <a href="about.html" target="">About</a></div>
+            <div class="box" id="box3"> <a href="Placement.html" target="">Placement </a> </div>
+            <div class="box" id="box4"> <a href="campus.html" target="">Campus</a> </div>
+            <div class="box" id="box5"> <a href="contact.html" target=""> Contact</a> </div>
+            <div class="box" id="box6"> <a href="sportsclub.html" target="">Sport club</a> </div>
+            <div class="box" id="box7"> <a href="admission.html" target="">Admission</a></div>
+            <div class="bo"> <a href="login.html" target="">login</a></div>
+
+        </div>
+
+    </header>
+
+
+    <div class="centre" style=" background-image: url(loginImage/tump.webp); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <h1>Login</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login" >
+      
+            <div class="signup_link">
+               Not a member? <a href="#">Signup</a>
+
+            </div>
+        </form>
+    </div>
+
+
+    
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbyFOEK36ruc8Ik-_1QkJOo-RnG4sPChwFY6tLvnuAE-MrG2uu6re8xdlDsiBcVfzQOwKQ/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            fetch(scriptURL, { method: 'post', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact YouSoon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <audio src="loginImage/221.mp3" autoplay></audio>
+</body>
+
+</html>

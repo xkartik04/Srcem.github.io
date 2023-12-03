@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shri Ram College Of Engineering and Management (SRCEM), Banmore</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="image/Logo/title.logo.jpg" type="icon/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+
+            <div><img src="image/Logo/Group Logo.png" alt="Reload"></div>
+            <div class="box" id="box1"> <a href="index.html">Home</a></div>
+            <div class="box" id="box2"> <a href="about.html" target="">About</a></div>
+            <div class="box" id="box3"> <a href="Placement.html" target="">Placement </a> </div>
+            <div class="box" id="box4"> <a href="campus.html" target="">Campus</a> </div>
+            <div class="box" id="box5"> <a href="contact.html" target=""> Contact</a> </div>
+            <div class="box" id="box6"> <a href="sportsclub.html" target="">Sport club</a> </div>
+            <div class="box" id="box7"> <a href="admission.html" target="">Admission</a></div>
+            <div class="bo"> <a href="login.html" target="">login</a></div>
+
+        </div>
+
+    </header>
+
+
+    <h1>Want to Connect?</h1>
+    <h2 class="fill">Fill the form</h2>
+
+    <!-- <div class="contact-box">
+    
+            <form>
+                <input type="text" class="input-field" placeholder="Name" required>
+                <br>
+                <input type="text" class="input-field" placeholder="Number" required>
+                <br>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <br>
+                <textarea type="text" class="input-field textarea-field" placeholder="Query"></textarea>
+                <br>
+                <button type="button" class="btn">Send</button>
+            </form>
+        </div> -->
+    <!-- <body> -->
+
+    <div class="border">
+        <form method="post" name="google-sheet">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="Firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="Lastname" placeholder="Your last name..">
+
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Your Email">
+
+            <!-- <label for="Gender">Gender</label>
+                <select id="Gender" name="Gender">
+                    <option value="Select">Select</option>
+
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+               -->
+            <input type="submit" value="Submit" name="submit">
+        </form>
+    </div>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbyFOEK36ruc8Ik-_1QkJOo-RnG4sPChwFY6tLvnuAE-MrG2uu6re8xdlDsiBcVfzQOwKQ/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            fetch(scriptURL, { method: 'post', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact YouSoon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <audio src="Contact/21.mp3" autoplay ></audio>
+
+</body>
+
+</html>
